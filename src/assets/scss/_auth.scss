@@ -1,0 +1,36 @@
+.auth {
+    @include container;
+    background-color: white;
+
+    &-box {
+        max-width: 800px;
+        margin: 20vh auto 5rem
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__form {
+        max-width: 500px;
+        margin: 2rem auto
+    }
+
+    &__button {
+        text-align: center;
+        margin-top: 1.5rem;
+
+        button {
+            width: 100%;
+
+            @include tablet {
+                width: 200px;
+            }
+        }
+    }
+
+    &__info {
+        text-align: center;
+        font-size: 85%;
+    }
+}

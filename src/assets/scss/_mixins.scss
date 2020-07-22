@@ -1,0 +1,65 @@
+// Device widths
+
+$mobile: "screen and (max-width: 639px)";
+$tablet: "screen and (min-width: 640px)";
+$desktop: "screen and (min-width: 968px)";
+$desktop-lg: "screen and (min-width: 1280px)";
+$desktop-xl: "screen and (min-width: 1440px)";
+
+@mixin mobile {
+    @media #{$mobile} {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media #{$tablet} {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media #{$desktop} {
+        @content;
+    }
+}
+
+@mixin desktop-lg {
+    @media #{$desktop-lg} {
+        @content;
+    }
+}
+
+@mixin desktop-xl {
+    @media #{$desktop-xl} {
+        @content;
+    }
+}
+
+// Flex-box
+@mixin flexbox-center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+// Container
+@mixin container {
+    width: 100%;
+    padding-right: 1.325rem;
+    padding-left: 1.325rem;
+
+    @include tablet {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    @include desktop {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    @include desktop-lg {
+        padding: 0;
+    }
+}

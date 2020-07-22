@@ -1,0 +1,52 @@
+.landing {
+    min-height: 100vh;
+    @include flexbox-center;
+    position: relative;
+    background-color: #015FC4;
+    color: white;
+    width: 100%;
+    padding-right: 1.325rem;
+    padding-left: 1.325rem;
+
+    @include tablet {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        background-image: url('./assets/img/bg.svg');
+        background-color: #fff;
+        background-size: cover;
+        background-position: center;
+    }
+
+    @include desktop {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    @include desktop-lg {
+        padding: 0;
+    }
+
+    &__hero {
+        flex: 0 0 100%;
+
+        @include tablet {
+            flex-basis: 40%;
+        }
+    }
+
+    &__image {
+        flex: 0 0 100%;
+
+        @include tablet {
+            flex-basis: 60%;
+        }
+    }
+
+    &__buttons {
+        margin-top: 2rem;
+
+        button:first-child {
+            margin-right: 1rem;
+        }
+    }
+}
