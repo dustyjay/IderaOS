@@ -9,7 +9,7 @@ export default {
   name: 'Logout',
   mounted() {
     setTimeout(() => {
-      this.$router.push({ name: 'login' })
+      this.$router.push({ name: 'home' })
     }, 2000)
   }
 }
